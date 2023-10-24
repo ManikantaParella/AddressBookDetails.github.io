@@ -1,0 +1,68 @@
+#name{font-size: 30px;
+margin-top: 0px;
+margin-bottom: 0px;
+padding-left: 10px;
+font-weight: lighter;
+}
+#details{
+   
+    border-color: #cccccc;
+    padding-bottom: 10px;
+}
+.container{width: 380px;
+/*border-top: 1px solid;*/
+border-color:#cccccc;
+}
+.container p{margin-bottom:5px;
+margin-top: 5px;
+color: #333333;}
+p:not(.name):not(.contact){padding-left: 20px;}
+.contact{font-size: 16px;
+    margin-top: 0px;
+padding-left: 0;
+font-weight: bolder;
+padding-bottom: 15px;}
+.containerDetails{padding-left: 20px;
+padding-top: 15px;}
+.box:hover,.active{
+    color: #fffcf9;
+    background-color: #cee7f2;}
+pre{white-space:pre-line;
+padding-left: 20px;
+font-size: 16px;}
+#nameOfUser{font-size: 34px;
+margin-bottom: 0px;}
+#mobile{margin-bottom:0px;}
+#landline{margin-top: 0px;}
+#demo2{
+    position: relative;
+    width: 495px;
+    position: absolute;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+top: 20%;
+left: 30%;
+}
+form{ width: 380px;
+    position: absolute;
+   display: none;
+top: 20%;
+
+right: 5%;}
+
+.box{ border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid;
+    border-right: 1px solid;}
+#name1,#myEmail,#name2,#name3,#name4,#name5,#mobileid{font-size: 12px;
+color: red;}
+#edit{
+    position: absolute;
+    right: 70;
+    top: 45;
+}
+#delete{
+    position: absolute;
+    right: 0;
+    top: 45;
+}
+
