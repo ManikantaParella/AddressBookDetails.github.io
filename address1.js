@@ -30,6 +30,7 @@ function displayStudentDetails(name, email, mobile, landline, website, address) 
     detailsContainer.appendChild(studentBox);
     contactDetails(name, email, mobile, landline, website, address, id1);
     studentBox.addEventListener('click', function () {
+        document.getElementById('demo2').style.display='block';
         displaydetails(this.id);
     })
 }
@@ -58,6 +59,7 @@ function displaydetails(id) {
 }
 var intergerNumber = 0;
 function editForm(id1) {
+    document.getElementById('demo2').style.display='none';
     updateForm = 0;
     intergerNumber = parseInt(id1.id.slice(-1));
     var stringId2 = parseInt(id1.id.slice(-1));
@@ -152,6 +154,7 @@ function mobileNumber() {
     var phoneno = /^\d{10}$/;
 
     if (mob.value.match(phoneno)) {
+        document.getElementById('mobileid').innerText = "*";
         return true;
     }
     else {
