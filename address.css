@@ -35,19 +35,19 @@ margin-bottom: 0px;}
 #mobile{margin-bottom:0px;}
 #landline{margin-top: 0px;}
 #demo2{
-    position: relative;
+   position: absolute;
     width: 495px;
-    position: absolute;
+   
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-top: 20%;
-left: 30%;
+top: 165px;
+left: 490px;
 }
 form{ width: 380px;
     position: absolute;
    display: none;
-top: 20%;
+top: 220px;
 
-right: 5%;}
+left: 445px;}
 
 .box{ border-bottom: 1px solid #cccccc;
     border-top: 1px solid #cccccc;
@@ -57,12 +57,28 @@ right: 5%;}
 color: red;}
 #edit{
     position: absolute;
-    right: 70;
-    top: 45;
+    right: 98px;
+    top: 45px;
+    background-color: white;
+    border: 0px solid white;
 }
 #delete{
     position: absolute;
     right: 0;
-    top: 45;
+    top: 45px;
+    background-color: white;
+    border: 0px solid white;
 }
+#editImage{
+    position: absolute;
+    right: 135px;
+    top: 50px;
+    height: 15px;
+   }
+#deleteImage{
+    position: absolute;
+    right: 50px;
+    top: 45px;
+}
+
 
