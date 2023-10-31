@@ -66,17 +66,24 @@ class ContactService {
     }
 
     update(contact){
-        const con=contacts.findIndex((element) => element.id ===contact.id);
-        contacts.splice(con, 1, contact);
-        /*contacts[contacts.map((x, i) => [i, x]).filter(x => x[1] ==con)[0][0]] = contact;*/
+        const con=contacts.find((element) => element.id ===contact.id);
+        /*contacts.splice(con, 1, contact);*/
+        contacts = contacts.map(element => {
+            if (element === con) {
+              return contact;
+            }
+            return element;
+          });
+          
         localStorage.setItem(this.localStorageKey, JSON.stringify(contacts));
         return true;
     }
 
     delete(id){
 
-        const cont=contacts.findIndex((element) => element.id ==id);
-        contacts.splice(cont,1);
+        const cont=contacts.find((element) => element.id ==id);
+        /*contacts.splice(cont,1);*/
+        contacts = contacts.filter(function(item){ return item != cont })
         localStorage.setItem(this.localStorageKey, JSON.stringify(contacts));
         return true;
     }

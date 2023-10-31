@@ -78,7 +78,7 @@ function editingreplace(id) {
     }
 
     }
-    window. onbeforeunload = function (e) { localStorage. clear(); };
+   
 function deleteForm(id) {
         contactService.delete(id);
         const old1 = document.getElementById("details");
@@ -106,6 +106,7 @@ function (e)
         updateForm = 1;
         form.reset();
         form.style.display = 'none';
+        return false;
     }
     else{
         if (form.elements.fname.value != "") {
@@ -130,6 +131,7 @@ function (e)
 }
 })
 GetContactDetails();
+window. onbeforeunload = function (e) { localStorage. clear(); };
 // var numberToChange = 1;
 // var updateForm = 1;
 // var intergerNumber = 0;
