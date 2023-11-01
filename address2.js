@@ -1,6 +1,3 @@
-var updateForm = 1;
-myarr=[];
-var a="";
 const contactService  = new ContactService();
 function GetContactDetails(){
     const _constacts = contactService.get();
@@ -104,9 +101,10 @@ function (e)
         old1.innerHTML="";
         GetContactDetails(); 
         updateForm = 1;
+        e.preventDefault();
         form.reset();
         form.style.display = 'none';
-        return false;
+       
     }
     else{
         if (form.elements.fname.value != "") {
@@ -130,6 +128,9 @@ function (e)
         }
 }
 })
+var updateForm = 1;
+myarr=[];
+var a="";
 GetContactDetails();
 window. onbeforeunload = function (e) { localStorage. clear(); };
 // var numberToChange = 1;
