@@ -73,9 +73,7 @@ function editingreplace(id) {
         const contact={"id":id,"name":form.elements.fname.value,"email":form.elements.email.value,"mobile":form.elements.mob.value,"landline":form.elements.land.value,"website":form.elements.website.value,"address":form.elements.address.value}
         contactService.update(contact);
     }
-
-    }
-   
+}
 function deleteForm(id) {
         contactService.delete(id);
         const old1 = document.getElementById("details");
