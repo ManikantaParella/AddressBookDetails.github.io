@@ -128,6 +128,39 @@ function (e)
         }
 }
 })
+function validateName() {
+    var names = document.getElementsByClassName("name");
+    var emailBox = document.getElementById("email").value;
+    var validation_status = false;
+    for (var i = 0; i < names.length; i++) {
+        if (names[i].value == "") {
+            document.getElementById("name" + (i + 1)).innerText = "Required";
+            document.getElementById('mobileid').innerText = "Required";
+        }
+        else {
+            document.getElementById("name" + (i + 1)).innerText = "*";
+            validation_status = true;
+        }
+    }
+
+    if (emailBox != "") {
+        var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if (email.value.match(mailformat)) {
+            document.getElementById("myEmail").innerText = "*";
+
+        }
+        else {
+            alert("Invalid email address.");
+            validation_status = false;
+        }
+
+    }
+    else {
+        document.getElementById("myEmail").innerText = "Required";
+        validation_status = false;
+    }
+    return validation_status;
+}
 var updateForm = 1;
 myarr=[];
 var a="";
@@ -225,38 +258,7 @@ window. onbeforeunload = function (e) { localStorage. clear(); };
 
 
 // }
-// function validateName() {
-//     var names = document.getElementsByClassName("name");
-//     var emailBox = document.getElementById("email").value;
-//     var validation_status = false;
-//     for (var i = 0; i < names.length; i++) {
-//         if (names[i].value == "") {
-//             document.getElementById("name" + (i + 1)).innerText = "Required";
-//             document.getElementById('mobileid').innerText = "Required";
-//         }
-//         else {
-//             document.getElementById("name" + (i + 1)).innerText = "*";
-//             validation_status = true;
-//         }
-//     }
 
-//     if (emailBox != "") {
-//         var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-//         if (email.value.match(mailformat)) {
-//             document.getElementById("myEmail").innerText = "*";
-
-//         }
-//         else {
-//             alert("Invalid email address.");
-//             validation_status = false;
-//         }
-
-//     }
-//     else {
-//         document.getElementById("myEmail").innerText = "Required";
-//         validation_status = false;
-//     }
-//     return validation_status;
 
 // }
 // function mobileNumber() {
